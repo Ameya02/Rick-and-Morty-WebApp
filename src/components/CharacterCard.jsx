@@ -9,7 +9,8 @@ const CharacterCard = (props) => {
     <Space style={{ alignItems: 'center', justifyContent: 'center', margin: '38px' }} wrap>
       <Card
         key={props.id}
-        style={{ width: 300, borderColor: 'lightgrey' }}
+        
+        style={{ width: 300, borderColor: 'lightgrey', backgroundColor:"rgb(151,206,76)"  }}
         cover={
           <Link to={`/${props.id}`}>
             <img

@@ -9,7 +9,8 @@ function App() {
   return (
     <>
     <Navbar />
-    <BrowserRouter>
+
+    <BrowserRouter basename='document.baseURI.substring(document.baseURI.indexOf(window.location.origin) + window.location.origin.length, document.baseURI.lastIndexOf("/")'>
     <Routes>
       <Route  path='/' element={<Home/>} />
       <Route path = "/:id" element={<Characters />} />

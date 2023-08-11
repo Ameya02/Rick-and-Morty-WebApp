@@ -39,10 +39,11 @@ const Home = () => {
     <>
 
       {characters ? 
-      <>{characters.map((character, index) => (
+      <div style={{  backgroundColor: "#1F2937"
+      }}>{characters.map((character, index) => (
         <CharacterCard key={index} {...character} />
         ))}
-      </>:<>No Character Found</>}
+      </div>:<div style={{fontSize:"120px", color:"red"}}>No Character Found</div>}
       
     </>
   )

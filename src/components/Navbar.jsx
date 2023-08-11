@@ -1,15 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Select, Space, Input } from "antd";
 import { useCharacterContext } from "../context/context";
 import Link from "antd/es/typography/Link";
-
+import "./navbar.css"
 const { Search } = Input;
 
-const Navbar = () => {
-  const id = window.location.pathname;
-useEffect(()=> {
-
-},[id])
+const Navbar = ({ filter }) => {
   const { setName, setStatus, setGender } = useCharacterContext();
 
   return (
@@ -17,7 +13,7 @@ useEffect(()=> {
       className="navbar"
       style={{
         backgroundColor: "#A3A3A3",
-        height: "70px",
+        height: "80px",
         color: "#F5F5F5",
         display: "flex",
         alignItems: "center",
@@ -25,7 +21,6 @@ useEffect(()=> {
         position: "sticky",
         top: 0,
         zIndex: 1,
-        backdropFilter:"revert"
       }}
     >
       <Space>
@@ -38,12 +33,10 @@ useEffect(()=> {
           />
         </Link>
       </Space>
-      {id==="/"?
-      <Space>
+      <Space style={{ visibility: filter }}>
         <Search
           placeholder="Who is your favorite character?"
-          
-          style={{ width: 260, }}
+          style={{ width: 260 }}
           onSearch={(value) => setName(value)}
           enterButton
         />
@@ -72,8 +65,7 @@ useEffect(()=> {
             { value: null, label: "Gender" },
           ]}
         />
-      </Space>:<></>
-}
+      </Space>
     </nav>
   );
 };

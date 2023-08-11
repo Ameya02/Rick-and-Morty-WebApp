@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const CharacterCard = (props) => {
   return (
     <Space
-      style={{ alignItems: "center", justifyContent: "center", margin: "38px", color:"#F5F5F5", }}
+      style={{ backgroundColor: "#1F2937", alignItems: "center", justifyContent: "center", margin: "38px", color:"#F5F5F5", }}
       wrap
     >
       <Card

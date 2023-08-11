@@ -7,7 +7,8 @@ const Characters = () => {
   const [character, setCharacter] = useState(null);
   const { id } = useParams();
   const mediumSizeContent = (content) => (
-    <span style={{ fontSize: "30px" }}> {content}</span>
+    <span style={{ 
+    color:"#F5F5F4", fontSize: "30px" }}> {content}</span>
   );
 
   useEffect(() => {
@@ -25,6 +26,7 @@ const Characters = () => {
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
+        
         }}
       >
         {character ? (
@@ -38,8 +40,8 @@ const Characters = () => {
               style={{
                 display: "flex",
                 height: "80vh",
-                backgroundColor: "#A7CB54",
-              }}
+                backgroundColor: "#525252",
+                color:"#22C55E",              }}
             >
               <div style={{ position: "absolute" }}>
                 <Image
@@ -51,7 +53,7 @@ const Characters = () => {
                 />
               </div>
               <div style={{ position: "relative", paddingLeft: "500px" }}>
-                <h1 style={{}}>{character.name}</h1>
+                <h1 >{character.name}</h1>
                 <Descriptions
                   style={{
                     fontSize: "50px",

@@ -1,20 +1,33 @@
-import "./navbar.css";
-
-import React from "react";
-
+import React, { useEffect } from "react";
 import { Select, Space, Input } from "antd";
 import { useCharacterContext } from "../context/context";
 import Link from "antd/es/typography/Link";
-// import { useNavigate } from "react-router-dom";
 
 const { Search } = Input;
 
 const Navbar = () => {
+  const id = window.location.pathname;
+useEffect(()=> {
+
+},[id])
   const { setName, setStatus, setGender } = useCharacterContext();
-  // const navigate = useNavigate();
 
   return (
-    <nav className="navbar">
+    <nav
+      className="navbar"
+      style={{
+        backgroundColor: "#A3A3A3",
+        height: "70px",
+        color: "#F5F5F5",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-around",
+        position: "sticky",
+        top: 0,
+        zIndex: 1,
+        backdropFilter:"revert"
+      }}
+    >
       <Space>
         <Link href="/">
           <img
@@ -25,10 +38,12 @@ const Navbar = () => {
           />
         </Link>
       </Space>
+      {id==="/"?
       <Space>
         <Search
           placeholder="Who is your favorite character?"
-          style={{ width: 260 }}
+          
+          style={{ width: 260, }}
           onSearch={(value) => setName(value)}
           enterButton
         />
@@ -57,7 +72,8 @@ const Navbar = () => {
             { value: null, label: "Gender" },
           ]}
         />
-      </Space>
+      </Space>:<></>
+}
     </nav>
   );
 };

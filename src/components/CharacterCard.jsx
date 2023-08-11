@@ -1,21 +1,21 @@
 import { Space } from "antd";
 import { Card } from "antd";
-import Meta from "antd/es/card/Meta";
 import React from "react";
 import { Link } from "react-router-dom";
 
 const CharacterCard = (props) => {
   return (
     <Space
-      style={{ alignItems: "center", justifyContent: "center", margin: "38px" }}
+      style={{ alignItems: "center", justifyContent: "center", margin: "38px", color:"#F5F5F5", }}
       wrap
     >
       <Card
         key={props.id}
         style={{
           width: 300,
-          borderColor: "lightgrey",
-          backgroundColor: "rgb(151,206,76)",
+          color:"#BBF7D0",
+          borderColor: "#F5F5F5",
+          backgroundColor: "#525252",
         }}
         cover={
           <Link to={`/${props.id}`}>
@@ -23,7 +23,8 @@ const CharacterCard = (props) => {
           </Link>
         }
       >
-        <Meta title={props.name} description={props.gender} />
+        <p style={{ color:"#86EFAC",fontSize:"20px"}}>{props.name}</p>
+        <p style={{fontSize:"15px", }}>{props.gender}</p>
       </Card>
     </Space>
   );

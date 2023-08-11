@@ -1,51 +1,57 @@
-
-# Rick and Morty Website
-
-A website based on the popular animated tv show ricky and morty giving knolwedge about differnet character in the show and their status and what is there current location.
-
-## Authors
-
-- [@Ameya02](https://www.github.com/Ameya02)
+# Rick and Morty WebApp
 
 
-## Demo
-![Gif demo](https://github.com/Ameya02/Rick-and-Morty-WebApp/assets/65841021/e7bdc276-efc7-4397-b972-0be3f8a8c7ce)
+Welcome to the README for the Rick and Morty WebApp project. This website is based on the popular animated TV show "Rick and Morty," providing information about different characters in the show, including their status, current location, and more. The project uses the Rick and Morty API to fetch and display character data.
 
+## Features
 
+- **Character List:** Browse through a list of characters from the show.
+- **Filtering:** Use filters to narrow down characters based on their name, status, and gender.
+- **Character Details:** Access a dedicated page for each character to view more detailed information.
 
-## Tech Stack
+## Installation
 
-**Client:** React, Ant Design, Node, Rick and Morty API
+To get the Rick and Morty WebApp up and running on your local machine, follow these steps:
 
-
-## Run Locally
-
-Clone the project
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Ameya02/Rick-and-Morty-WebApp
+   cd Rick-and-Morty-WebApp```
+2. **Install dependencies:**
 
 ```bash
-  git clone https://link-to-project
+npm install
 ```
-
-Go to the project directory
+3. **Run the project:**
 
 ```bash
-  cd RickandMorty
+npm start
 ```
-
-Install dependencies
-
+4. **Open in your browser:**
+Open your web browser and go to
 ```bash
-  npm install
+http://localhost:3000.
 ```
+## Usage
+To use the Rick and Morty WebApp:
 
-Start the server
+Visit the site: 
+```bashhttps://rick-and-morty-web-app-sigma.vercel.app/ ```
+Browse the various characters from the show.
+Utilize the filters in the top-right section to refine your character search.
+Click on a character to access detailed information about them.
+Contributing
+Contributions to the Rick and Morty WebApp project are welcome! To contribute:
 
-```bash
-  npm run start
-```
+##Fork the repository.
+Create a new branch for your feature: git checkout -b feature-name.
+Make your changes and commit them: git commit -m "Add feature xyz".
+Push your changes to your fork: git push origin feature-name.
+Create a pull request, detailing the changes you've made.
+Please ensure your contributions adhere to the project's code of conduct.
 
+##License
+This project is licensed under the [MIT License] License. See the LICENSE file for details.
 
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+##Contact Information
+For questions or feedback, you can reach out to [ameyabavkar02@gmail.com].

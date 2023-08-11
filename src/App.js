@@ -5,20 +5,26 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Characters from "./pages/Characters";
+import { Layout } from "antd";
+const ApplyLayout = (page,pagename) => <Layout style={{  backgroundColor: "#1F2937"}}>
+      <Navbar filter={pagename  === 'home' ? '' : 'hidden'} />
+
+  {page}
+  <Footer />
+
+</Layout>;
 function App() {
+
   return (
-    <>
-      <Navbar />
+  
 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/:id" element={<Characters />} />
-          <Route />
+          <Route path="/" element={ApplyLayout(<Home />,"home")} />
+          <Route path="/:id" element={ApplyLayout(<Characters />,"characters")} />
         </Routes>
       </BrowserRouter>
-      <Footer />
-    </>
+  
   );
 }
 
